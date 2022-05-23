@@ -1,10 +1,12 @@
-let btn = document.getElementById("btn");
-btn.onclick = function () {
-  let list1 = document.getElementById("list-1");
-  let list2 = document.getElementById("list-2");
-  let items_1 = list1.getElementsByTagName("li");
-  let items_2 = list2.getElementsByTagName("li");
-  let new_list = document.getElementById("new");
+let list1 = document.getElementById("list-1");
+let list2 = document.getElementById("list-2");
+let items_1 = list1.getElementsByTagName("li");
+let items_2 = list2.getElementsByTagName("li");
+let new_list = document.getElementById("new");
+let btnClick = document.getElementById("btnClick");
+let btnRemove = document.getElementById("btnRemove");
+
+btnClick.onclick = function () {
   new_list.innerHTML=""
   let newarr=[];
   let listarray=[];
@@ -30,4 +32,7 @@ btn.onclick = function () {
 }
 
 
+btnRemove.onclick=function(){
+  new_list.innerHTML=""
 
+}

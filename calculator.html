@@ -40,11 +40,13 @@
             padding-top: 100px;
         }
         .area{
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 70%;
             margin: auto;
-            min-height: 50px;
-            font-size: 300%;
+            min-height: 150px;
+            font-size: 400%;
             border: 2px solid black;
             background-color: black;
         }
@@ -53,8 +55,8 @@
 <body>
 
     <div class="row">
-        <input type="number" id="first" placeholder="Number-1">
-        <input type="number" id="second" placeholder="Number-2">
+        <input type="number" id="first" placeholder="Write number">
+        <input type="number" id="second" placeholder="Write number">
     </div>
     <div class="buttons">
         <button id="plus" class="blue">Toplama</button>

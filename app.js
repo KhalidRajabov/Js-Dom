@@ -5,17 +5,15 @@ btn.onclick = function () {
   let items_1 = list1.getElementsByTagName("li");
   let items_2 = list2.getElementsByTagName("li");
   let new_list = document.getElementById("new");
-  
-  
 
+  console.log(list1);
   for (let i = 0; i < items_1.length; i++) {
-    let text1 = i.innerText;
     for (let j = 0; j < items_2.length; j++) {
-        let text2 = j.innerText;
-        if (text1 != text2) {
+      if (items_1 != items_2) {
+        console.log(items_1.text, items_2);
         let new_li = document.createElement("li");
         new_list.append(new_li);
-        new_li.innerText = new_li;
+        new_li.innerText = "";
         console.log("works");
       }
     }

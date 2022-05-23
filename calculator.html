@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buttons, .row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 50px;
+        }
+        input{
+            width: 40%;
+            padding: 15px;
+            font-size: 150%;
+        }
+        button{
+            width: 20%;
+            padding: 20px;
+            font-size: 130%;
+            color: white;
+            cursor: pointer;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .yellow{
+            background-color: orange;
+        }
+        .result{
+            padding-top: 100px;
+        }
+        .area{
+            text-align: center;
+            width: 70%;
+            margin: auto;
+            min-height: 50px;
+            font-size: 300%;
+            border: 2px solid black;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <input type="number" id="first" placeholder="Number-1">
+        <input type="number" id="second" placeholder="Number-2">
+    </div>
+    <div class="buttons">
+        <button id="plus" class="blue">Toplama</button>
+        <button id="minus" class="red">Cixma</button>
+        <button id="mult" class="green">Vurma</button>
+        <button id="divide" class="yellow">Bolme</button>
+    </div>
+    <div class="result">
+        <div id="area" class="area"></div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>

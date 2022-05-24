@@ -18,15 +18,16 @@ btnClick.onclick = function () {
   let text = input.value;
   if (text != "") {
     let li = document.createElement("li");
+    let icon = document.createElement("i")
+    icon.classList="fa-solid fa-delete-left"
     li.classList = "list-group-item list sorted";
     new_list.append(li);
-    li.innerHTML = text + `<i onclick="myFunction()" id="icon" class="fa-solid fa-delete-left"></i>`;
+    li.innerHTML = text;
+    li.append(icon)
+    icon.onclick=function(){
+      li.remove();
+    }
   }
-};
-
-function myFunction(){
-  let icon = document.getElementById("icon")
-  icon.parentElement.remove();
 }
 btnRemove.onclick = function () {
   new_list.innerHTML = "";

@@ -31,11 +31,17 @@ btnClick.onclick = function () {
     icon.onclick=function(){
       li.remove();
     }
-    let check = document.getElementById("check")
+    let checkbox = form.querySelector(`#check`)
+    
     btnRemoveSome.onclick=function(){
-      if(check.checked){
-        li.remove();
+      let list = new_list.getElementsByTagName("li")
+      for (let i = 0; i < list.length; i++) {
+        console.log(list[i]);
+        if(checkbox.value!=""){
+          checkbox.parentElement.parentElement.remove();
+        }
       }
+      
     }
   }
 }

@@ -11,23 +11,25 @@ input.addEventListener("keypress", function (event) {
   }
 });
 
+
+
+
 btnClick.onclick = function () {
   let text = input.value;
-  let new_li = document.createElement("li");
-  new_li.classList = "list-group-item list sorted";
-  new_list.append(new_li);
-  new_li.innerHTML = text + `<i id="icon" class="fa-solid fa-delete-left"></i>`;
-  
-  
-  let icon = document.getElementById("icon")
-    icon.onclick=function(){
-      icon.parentElement.remove();
-     }  
-  
-  
-
+  if (text != "") {
+    let li = document.createElement("li");
+    li.classList = "list-group-item list sorted";
+    new_list.append(li);
+    li.innerHTML = text + `<i onclick="myFunction()" id="icon" class="fa-solid fa-delete-left"></i>`;
+  }
 };
-btnRemove.onclick=function(){
-  new_list.innerHTML=""
+
+function myFunction(){
+  let icon = document.getElementById("icon")
+  icon.parentElement.remove();
 }
+btnRemove.onclick = function () {
+  new_list.innerHTML = "";
+};
+
 

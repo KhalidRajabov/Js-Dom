@@ -5,7 +5,9 @@ let items_2 = list2.getElementsByTagName("li");
 let new_list = document.getElementById("new");
 let btnClick = document.getElementById("btnClick");
 let btnRemove = document.getElementById("btnRemove");
-
+let allLists = document.getElementsByTagName("li")
+let sortedLists = document.getElementsByClassName("sorted")
+let area = document.getElementById("area")
 btnClick.onclick = function () {
   new_list.innerHTML=""
   let newarr=[];
@@ -23,16 +25,21 @@ btnClick.onclick = function () {
   
   for (let i = 0; i < listarray.length; i++) {
     let new_li = document.createElement("li");
-    new_li.classList="list-group-item list"
+    new_li.classList="list-group-item list sorted"
     new_list.append(new_li);
     new_li.innerText = listarray[i];
   }
   
-  console.log(listarray);
+  area.innerText ="Total lists currently:  " + sortedLists.length
 
 }
-
 
 btnRemove.onclick=function(){
   new_list.innerHTML=""
+  area.innerText ="Total lists currently:  " + allLists.length
 }
+
+function listCounter(){
+  area.innerText ="Total lists before click:  " + allLists.length
+}
+listCounter();

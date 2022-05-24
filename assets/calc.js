@@ -5,6 +5,9 @@ let minus = document.getElementById("minus");
 let mult = document.getElementById("mult");
 let divide = document.getElementById("divide");
 let toResult = document.getElementById("area");
+
+
+
 plus.onclick = function () {
     let num1 = parseInt(first.value) 
     let num2 = parseInt(second.value) 

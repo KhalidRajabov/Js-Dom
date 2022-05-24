@@ -23,7 +23,7 @@ btnClick.onclick = function () {
   
   for (let i = 0; i < listarray.length; i++) {
     let new_li = document.createElement("li");
-    new_li.className="list-group-item"
+    new_li.classList="list-group-item list"
     new_list.append(new_li);
     new_li.innerText = listarray[i];
   }

@@ -31,11 +31,10 @@ btnClick.onclick = function () {
     icon.onclick=function(){
       li.remove();
     }
-
     let check = document.getElementById("check")
     btnRemoveSome.onclick=function(){
       if(check.checked){
-        parentElement.remove();
+        li.remove();
       }
     }
   }
@@ -43,6 +42,4 @@ btnClick.onclick = function () {
 btnRemove.onclick = function () {
   new_list.innerHTML = "";
 };
-
-
 
